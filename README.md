@@ -38,3 +38,5 @@ git commit -m ""  (commit changes done on branch)
 
 git push -u origin branchname (send updates in branch to github web)
 
+
+https://www.linux.com/learn/beginning-git-and-github-linux-users   (good site)
