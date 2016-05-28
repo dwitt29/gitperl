@@ -23,3 +23,7 @@ git push -u origin master
 
 
 #testing update after clone
+
+
+git clone git@github.com:dwitt29/gitperl.git .   (use clone to pull down a copy from git)
+
