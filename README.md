@@ -10,7 +10,7 @@ git add README.md
 
 git commit -m "first commit"
 
-git remote add origin git@github.com:dwitt29/gitperl.git
+git remote add origin git@github.com:dwitt29/gitperl.git   (for new files, not updated ones)
 
 git push -u origin master
 
