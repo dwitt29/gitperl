@@ -1,4 +1,4 @@
-# gitperl DNW
+# gitperl dnw
 
 create a new repository on the command line
 
