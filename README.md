@@ -29,3 +29,7 @@ git clone git@github.com:dwitt29/gitperl.git .   (use clone to pull down a copy 
 
 
 git checkout -b branchname  (for branching)
+git status (check which branch you're under)
+git add . (add changes done on branch)
+git commit -m ""  (commit changes done on branch)
+git push -u origin branchname (send updates in branch to github web)
