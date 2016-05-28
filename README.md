@@ -27,3 +27,5 @@ git push -u origin master
 
 git clone git@github.com:dwitt29/gitperl.git .   (use clone to pull down a copy from git)
 
+
+git checkout -b branchname  (for branching)
