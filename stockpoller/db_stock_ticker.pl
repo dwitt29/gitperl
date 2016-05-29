@@ -26,7 +26,7 @@ my @labels = (
 	      ["volume","%10d",  11]
 );
 
-my $REFRESH = 1;	# Seconds between refresh.
+my $REFRESH = 10;	# Seconds between refresh.
 my $quoter = Finance::Quote->new();
 my $clear = `clear`;
 my $header = "\t\t\t\tSTOCK REPORT" .($CURRENCY ? " ($CURRENCY)" : "") ."\n\n";
@@ -55,7 +55,7 @@ foreach my $stockset (@stocks)
 }
 
 my $database="markets";
-my $hostname="192.168.1.3";
+my $hostname="192.168.2.2";
 my $port=3306;
 my $user="dave";
 my $password="test123";
@@ -85,7 +85,7 @@ for (;;)
       $pvol{$symbol}=$info{$symbol,"volume"};
       print "\n";
 
-      my $sth=$dbh->prepare("insert into test.stocks ( symbol, timestamp, lastprice, bid, ask, net, high, low, vol, lotsize ) values(?, now(), ?, ?, ?, ?, ?, ?, ?, ? );");
+      my $sth=$dbh->prepare("insert into test.stocks ( symbol, timestamp, lastprice, bid, ask, net, high, low, vol, lotsize, dtstamp ) values(?, now(), ?, ?, ?, ?, ?, ?, ?, ?, now() );");
 
       $sth->execute( $info{$symbol,"symbol"}, $info{$symbol,"last"}, $info{$symbol,"bid"}, $info{$symbol,"ask"}, $info{$symbol,"net"}, $info{$symbol,"high"}, $info{$symbol,"low"}, $info{$symbol,"volume"}, $info{$symbol,"lotsize"} );
 

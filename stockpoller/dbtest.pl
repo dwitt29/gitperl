@@ -5,7 +5,7 @@ use warnings;
 use DBI;
 
 my $database="markets";
-my $hostname="192.168.1.3";
+#my $hostname="192.168.2.2";
 my $port=3306;
 my $user="dave";
 my $password="test123";
